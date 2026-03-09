@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Dog Bites – Premium Dog Nutrition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      color: #222;
+      background: #fff;
+      font-size: 14px;
+    }
+
+    /* ── SECTION 1 – What makes us different ── */
+    .section-diff {
+      background: #fff;
+      padding: 56px 40px 48px;
+      text-align: center;
+    }
+
+    .section-diff h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.3;
+      max-width: 320px;
+      margin: 0 auto 36px;
+    }
+
+    .diff-layout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      max-width: 720px;
+      margin: 0 auto 36px;
+    }
+
+    .diff-features {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      text-align: left;
+      flex: 1;
+    }
+
+    .diff-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .diff-feature .icon-wrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #f0faf0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .diff-feature .icon-wrap svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .diff-feature h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 3px;
+    }
+
+    .diff-feature p {
+      font-size: 11.5px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .diff-bowl {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .cta-orange {
+      display: inline-block;
+      background: #f4854a;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 13px 30px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+
+    .trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 11px;
+      color: #888;
+      flex-wrap: wrap;
+    }
+
+    .trust-row .shield {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: #555;
+    }
+
+    .trust-badges {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .badge {
+      background: #1a1f71;
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+    }
+    .badge.visa { background: #1a1f71; }
+    .badge.mc { background: #eb001b; }
+    .badge.amex { background: #007bc1; }
+    .badge.disc { background: #f76f20; }
+
+    /* ── SECTION 2 – Nutrition foundation ── */
+    .section-nutrition {
+      background: #f9f9f9;
+      padding: 56px 40px;
+    }
+
+    .nutrition-layout {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .nutrition-text { flex: 1; }
+
+    .nutrition-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .nutrition-text p {
+      font-size: 12.5px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .key-points-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+
+    .stat-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .stat-pct {
+      font-size: 22px;
+      font-weight: 700;
+      color: #f4854a;
+      min-width: 48px;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .stat-desc {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .nutrition-img {
+      width: 200px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    }
+
+    /* ── SECTION 3 – Gastrointestinal health ── */
+    .section-gi {
+      background: #fff;
+      padding: 56px 40px;
+    }
+
+    .gi-layout {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .gi-img {
+      width: 230px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+    }
+
+    .gi-text { flex: 1; }
+
+    .gi-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .gi-text p {
+      font-size: 12.5px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* ── SECTION 4 – Prebiotics ── */
+    .section-prebiotics {
+      background: #f9f9f9;
+      padding: 56px 40px;
+    }
+
+    .pre-layout {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .pre-text { flex: 1; }
+
+    .pre-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .pre-text p {
+      font-size: 12.5px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .pre-img {
+      width: 230px;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+    }
+
+    .cta-small {
+      display: inline-block;
+      background: #f4854a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 11px 22px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 18px;
+    }
+
+    .img-bowl {
+      background: radial-gradient(circle at 60% 40%, #d4956a 0%, #8b4513 40%, #5a2d0c 70%, #3a1a05 100%);
+      border-radius: 50%;
+    }
+
+    .img-dog-product {
+      background: linear-gradient(160deg, #e8e0d5 0%, #c8b89a 40%, #a89070 70%, #7a6050 100%);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img-dog-product::after {
+      content: "Happy\ADog Bites";
+      white-space: pre;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      background: #2a7a3b;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .img-dachshund {
+      background: linear-gradient(160deg, #e0dbd5 0%, #b5a898 40%, #8a7060 70%, #5a4035 100%);
+      border-radius: 12px;
+    }
+
+    .img-kibble {
+      background: linear-gradient(135deg, #c8864a 0%, #a0622e 30%, #c8864a 60%, #8a4a18 100%);
+      border-radius: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .diff-layout, .nutrition-layout, .gi-layout, .pre-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+      .diff-bowl { border-radius: 50%; height: 180px; width: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="section-diff">
+  <h2>What makes us different makes them stronger</h2>
+  <div class="diff-layout">
+    <div class="diff-features">
+      <div class="diff-feature">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l3 3 5-5"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Real Food</h4>
+          <p>Wholesome recipes for dogs with real<br>meat and veggies.</p>
+        </div>
+      </div>
+      <div class="diff-feature">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Premium Ingredient</h4>
+          <p>Develop pet care with unmatched<br>safety and quality.</p>
+        </div>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400"
+class="diff-bowl"
+style="width:200px;height:200px;"
+alt="Dog food bowl">
+    <div class="diff-features">
+      <div class="diff-feature">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Made Fresh</h4>
+          <p>We prioritize maintaining the integrity<br>of whole foods and nutrition.</p>
+        </div>
+      </div>
+      <div class="diff-feature">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Vet Developed</h4>
+          <p>We raise the bar for dog nutrition,<br>surpassing industry expectations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="cta-orange">Get your dog's healthy meal today</a>
+  <br/>
+  <div class="trust-row" style="margin-top:10px;">
+    <span class="shield">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      60 day money back guarantee
+    </span>
+    <div class="trust-badges">
+      <span class="badge visa">VISA</span>
+      <span class="badge mc">MC</span>
+      <span class="badge amex">AMEX</span>
+      <span class="badge disc">DISC</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-nutrition">
+  <div class="nutrition-layout">
+    <div class="nutrition-text">
+      <h2>Nutrition is the foundation for longer, healthier lives in dogs.</h2>
+      <p>Invest in your dog's future with our scientifically formulated superfood-powered supplements. Give them the nutrition they deserve and watch them thrive with vitality, energy, and the joy of a longer, healthier life.</p>
+      <div class="key-points-label">Key Points:</div>
+      <div class="stat-row">
+        <div class="stat-pct">97%</div>
+        <div class="stat-desc">Dogs choose our dog food over leading brands because of its real functional ingredients and delicious flavor.</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-pct">84%</div>
+        <div class="stat-desc">Our dog food provides superior nutrition and a patented probiotic for optimal nutrient absorption.</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-pct">92%</div>
+        <div class="stat-desc">Our dog food's high protein and fat digestibility contribute to ideal stool quality.</div>
+      </div>
+      <a href="#" class="cta-small">Give your furry friend the gift of wholesome nutrition</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400"
+class="img-dog-product"
+style="width:200px;height:260px;"
+alt="Dog food product">
+  </div>
+</section>
+
+<section class="section-gi">
+  <div class="gi-layout">
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400"
+class="img-dachshund"
+style="width:230px;height:210px;"
+alt="Dachshund dog">
+    <div class="gi-text">
+      <h2>Improve overall gastrointestinal health for better nutrient absorption</h2>
+      <p>Through rigorous scientific studies and consultations with veterinarians, we have created a breakthrough formula exclusively tailored to combat the health challenges prevalent in dogs. A staggering 87% of our customers have reported significant improvements in their dogs' health after incorporating our product into their diet.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-prebiotics">
+  <div class="pre-layout">
+    <div class="pre-text">
+      <h2>Prebiotics nourish the beneficial gut bacteria, supporting digestive health</h2>
+      <p>Our dog food formula contains carefully selected prebiotics that work in harmony with the gut microbiome, providing the necessary nutrients for the growth and maintenance of beneficial bacteria, effectively supporting digestive health.</p>
+    </div>
+   <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400"
+class="img-kibble"
+style="width:230px;height:175px;"
+alt="Dog kibble">
+  </div>
+</section>
+
+</body>
+</html>
